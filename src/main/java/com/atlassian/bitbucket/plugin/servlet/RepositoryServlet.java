@@ -1,8 +1,8 @@
-package com.atlassian.stash.plugin.servlet;
+package com.atlassian.bitbucket.plugin.servlet;
 
 import com.atlassian.soy.renderer.SoyTemplateRenderer;
-import com.atlassian.stash.repository.Repository;
-import com.atlassian.stash.repository.RepositoryService;
+import com.atlassian.bitbucket.repository.Repository;
+import com.atlassian.bitbucket.repository.RepositoryService;
 import com.google.common.collect.ImmutableMap;
 
 import javax.servlet.ServletException;

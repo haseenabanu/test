@@ -1,4 +1,4 @@
-package com.atlassian.stash.plugin.servlet;
+package com.atlassian.bitbucket.plugin.servlet;
 
 import com.atlassian.soy.renderer.SoyException;
 import com.atlassian.soy.renderer.SoyTemplateRenderer;
@@ -20,7 +20,7 @@ public abstract class AbstractExampleServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         try {
             soyTemplateRenderer.render(resp.getWriter(),
-                    "com.atlassian.stash.plugin.stash-example-plugin:example-soy",
+                    "com.atlassian.bitbucket.server.bitbucket-example-plugin:example-soy",
                     templateName,
                     data);
         } catch (SoyException e) {

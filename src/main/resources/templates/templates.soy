@@ -6,7 +6,7 @@
 {template .project}
 <html>
 <head>
-    <meta name="decorator" content="stash.project.general">
+    <meta name="decorator" content="bitbucket.project.general">
     <meta name="projectKey" content="{$project.key}">
     <meta name="activeTab" content="project-plugin-tab">
     <title>{$project.key} / Example Tab</title>
@@ -24,7 +24,7 @@
 {template .projectSettings}
 <html>
 <head>
-    <meta name="decorator" content="stash.project.settings">
+    <meta name="decorator" content="bitbucket.project.settings">
     <meta name="projectKey" content="{$project.key}">
     <meta name="activeTab" content="project-settings-plugin-tab">
     <title>{$project.key} / Example Tab</title>
@@ -42,7 +42,7 @@
 {template .repository}
 <html>
 <head>
-    <meta name="decorator" content="stash.repository.general">
+    <meta name="decorator" content="bitbucket.repository.general">
     <meta name="projectKey" content="{$repository.project.key}">
     <meta name="repositorySlug" content="{$repository.slug}">
     <meta name="activeTab" content="repository-plugin-tab">
@@ -62,7 +62,7 @@
 {template .repositorySettings}
 <html>
 <head>
-    <meta name="decorator" content="stash.repository.settings">
+    <meta name="decorator" content="bitbucket.repository.settings">
     <meta name="projectKey" content="{$repository.project.key}">
     <meta name="repositorySlug" content="{$repository.slug}">
     <meta name="activeTab" content="repository-settings-plugin-tab">
@@ -81,7 +81,7 @@
 {template .pullRequest}
 <html>
 <head>
-    <meta name="decorator" content="stash.pullrequest.view">
+    <meta name="decorator" content="bitbucket.pullrequest.view">
     <meta name="projectKey" content="{$pullRequest.toRef.repository.project.key}">
     <meta name="repositorySlug" content="{$pullRequest.toRef.repository.slug}">
     <meta name="pullRequestId" content="{$pullRequest.id}">
@@ -96,12 +96,12 @@
 {/template}
 
 /**
- * @param user StashUser object which is in the context provided by ProfileServlet
+ * @param user ApplicationUser object which is in the context provided by ProfileServlet
  */
 {template .profile}
 <html>
 <head>
-    <meta name="decorator" content="stash.users.profile">
+    <meta name="decorator" content="bitbucket.users.profile">
     <meta name="userSlug" content="{$user.slug}">
     <meta name="activeTab" content="profile-plugin-tab">
     <title>{$user.displayName} / Profile Tab</title>
@@ -114,12 +114,12 @@
 {/template}
 
 /**
- * @param user StashUser object which is in the context provided by ProfileServlet
+ * @param user ApplicationUser object which is in the context provided by ProfileServlet
  */
 {template .account}
 <html>
 <head>
-    <meta name="decorator" content="stash.users.account">
+    <meta name="decorator" content="bitbucket.users.account">
     <meta name="userSlug" content="{$user.slug}">
     <meta name="activeTab" content="account-plugin-tab">
     <title>{$user.displayName} / Profile Tab</title>

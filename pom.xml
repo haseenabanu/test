@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.atlassian.stash.plugin</groupId>
-    <artifactId>stash-example-plugin</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+
+    <groupId>com.atlassian.bitbucket.server</groupId>
+    <artifactId>bitbucket-example-plugin</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <organization>
         <name>Atlassian</name>
-        <url>http://www.atlassian.com/stash</url>
+        <url>http://www.atlassian.com/</url>
     </organization>
 
-    <name>stash-example-plugin</name>
-    <description>This is an example plugin decorating the various page around Stash.</description>
+    <name>Bitbucket Server Example Plugin</name>
+    <description>This is an example plugin decorating the various page around Bitbucket Server.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.atlassian.stash</groupId>
-                <artifactId>stash-parent</artifactId>
-                <version>${stash.version}</version>
+                <groupId>com.atlassian.bitbucket.server</groupId>
+                <artifactId>bitbucket-parent</artifactId>
+                <version>${bitbucket.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -28,28 +29,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.atlassian.stash</groupId>
-            <artifactId>stash-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.atlassian.stash</groupId>
-            <artifactId>stash-spi</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.atlassian.stash</groupId>
-            <artifactId>stash-page-objects</artifactId>
+            <groupId>com.atlassian.bitbucket.server</groupId>
+            <artifactId>bitbucket-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -63,16 +49,21 @@
         <plugins>
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>
-                <artifactId>maven-stash-plugin</artifactId>
+                <artifactId>bitbucket-maven-plugin</artifactId>
                 <version>${amps.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <instructions>
+                        <Atlassian-Plugin-Key>${project.groupId}.${project.artifactId}</Atlassian-Plugin-Key>
+                        <Import-Package>*</Import-Package>
+                        <Spring-Context>*</Spring-Context>
+                    </instructions>
                     <products>
                         <product>
-                            <id>stash</id>
-                            <instanceId>stash</instanceId>
-                            <version>${stash.version}</version>
-                            <dataVersion>${stash.data.version}</dataVersion>
+                            <id>bitbucket</id>
+                            <instanceId>bitbucket</instanceId>
+                            <version>${bitbucket.version}</version>
+                            <dataVersion>${bitbucket.data.version}</dataVersion>
                         </product>
                     </products>
                     <systemPropertyVariables>
@@ -85,8 +76,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -109,10 +100,8 @@
     </build>
 
     <properties>
-        <stash.version>3.0.0</stash.version>
-        <stash.data.version>3.0.0</stash.data.version>
-        <amps.version>6.0.0</amps.version>
-        <jdk.version>1.7</jdk.version>
-        <plugin.testrunner.version>1.1.1</plugin.testrunner.version>
+        <bitbucket.version>4.0.0-eap1</bitbucket.version>
+        <bitbucket.data.version>${bitbucket.version}</bitbucket.data.version>
+        <amps.version>6.1.0-6cf99b0</amps.version>
     </properties>
 </project>

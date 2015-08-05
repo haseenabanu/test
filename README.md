@@ -1,16 +1,16 @@
-# Stash plugin decorating tutorials
+# Bitbucket Server plugin decorating tutorials
 
-This is the Atlassian Stash example plugin for decorating various pages around Stash.
-See the [Stash developer documentation](https://developer.atlassian.com/stash/docs/3.0.1/reference/plugin-decorators.html)
-for a list of the available decorators in Stash 3.x.
+This is the Atlassian Bitbucket Server example plugin for decorating various pages around Bitbucket Server.
+See the [Bitbucket Server developer documentation](https://developer.atlassian.com/stash/docs/3.0.1/reference/plugin-decorators.html)
+for a list of the available decorators in Bitbucket Server 4.x.
 
 ----
 
 ## Project decorator
 
-Add a tab with content to the project page (see [STASH-7380](https://jira.atlassian.com/browse/STASH-7380) for the bug affecting this decorator in Stash 3.x).
+Add a tab with content to the project page.
 
-![project](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/project-decorator.png)
+![project](https://bitbucket.org/atlassian/bitbucket-example-plugin/raw/master/src/main/resources/examples/project-decorator.png)
 
 ----
 
@@ -18,11 +18,11 @@ Add a tab with content to the project page (see [STASH-7380](https://jira.atlass
 
 Add a tab with content to the repository page.
 
-![repo](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/repository-decorator.png)
+![repo](https://bitbucket.org/atlassian/bitbucket-example-plugin/raw/master/src/main/resources/examples/repository-decorator.png)
 
 Repository settings page
 
-![repo-settings](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/repository-settings-decorator.png)
+![repo-settings](https://bitbucket.org/atlassian/bitbucket-example-plugin/raw/master/src/main/resources/examples/repository-settings-decorator.png)
 
 ----
 
@@ -30,7 +30,7 @@ Repository settings page
 
 [User profile tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-profile.html) – add content to the user profile page.
 
-![profile](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
+![profile](https://bitbucket.org/atlassian/bitbucket-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
 
 ----
 
@@ -38,7 +38,7 @@ Repository settings page
 
 [User account tutorial](https://developer.atlassian.com/stash/docs/latest/tutorials-and-examples/decorating-the-user-account.html) – add content to the user account page.
 
-![account](https://bitbucket.org/atlassian/stash-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
+![account](https://bitbucket.org/atlassian/bitbucket-example-plugin/raw/master/src/main/resources/examples/user-profile-decorator.png)
 
 ----
 
